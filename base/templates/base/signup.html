@@ -1,13 +1,14 @@
-{% extends 'base/main.html' %}
-{% block content %}
-<h1>Sign up</h1>
+{% extends 'base/main.html' %} {% block content %}
+<div class="header">
+  <h1>Sign up</h1>
+</div>
 
-<form method="POST">
-  {%csrf_token%}
-  {{form.as_p}}
-  <input type="submit" value="Sign up" />
-</form>
-
+<div class="form-body">
+  <form method="POST">
+    {%csrf_token%} {{form.as_p}}
+    <input class="button" type="submit" value="Sign up" />
+  </form>
+</div>
 
 <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
 

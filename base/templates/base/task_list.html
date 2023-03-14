@@ -14,17 +14,19 @@
 
 <hr />
 <h1>My To Do List {{color}}</h1>
-<a href="{% url 'create-task' %}">Add Task</a>
 
-<form method="GET">
-  <input
-    type="text"
-    name="search"
-    placeholder="Search..."
-    value="{{search_input}}"
-  />
-  <input type="submit" value="Search" />
-</form>
+<div class="search-add-wrapper">
+  <form method="GET" style="margin-top: 20px; display: flex;">
+    <input
+      type="text"
+      name="search"
+      placeholder="Search..."
+      value="{{search_input}}"
+    />
+    <input class="button" type="submit" value="Search" />
+  </form>
+  <a id="add-task" href="{% url 'create-task' %}"><button class="button">Add Task</button></a>
+</div>
 
 <div class="tasks-wrapper">
   {% for task in tasks %}
@@ -34,15 +36,15 @@
       <div class="task-complete-icon"></div>
       <i><s>{{task}}</s></i>
     </div>
-    <a href="{% url 'update-task' task.id%}">&#xf044;</a>
-    <a href="{% url 'delete-task' task.id%}">&#xf1f8;</a>
+    <a href="{% url 'update-task' task.id%}"><i class="fa-solid fa-pen-to-square edit"></i></a>
+    <a href="{% url 'delete-task' task.id%}"><i class="fa-solid fa-trash delete"></i></a>
     {%else%}
     <div class="task-title">
       <div class="task-incomplete-icon"></div>
       <i>{{task}}</i>
     </div>
-    <a href="{% url 'update-task' task.id%}">&#xf044;</a>
-    <a href="{% url 'delete-task' task.id%}">&#xf1f8;</a>
+    <a href="{% url 'update-task' task.id%}"><i class="fa-solid fa-pen-to-square edit"></i></a>
+    <a href="{% url 'delete-task' task.id%}"><i class="fa-solid fa-trash delete"></i></a>
     {%endif%}
   </div>
   {%empty%}

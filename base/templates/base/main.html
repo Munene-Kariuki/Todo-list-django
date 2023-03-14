@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>TO DO LIST</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/1f9bd53e33.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,10 +35,11 @@
       h4,
       h5,
       h6 {
-        font-family: 'Raleway', sans-serif;
+        font-family: "Raleway", sans-serif;
       }
 
-      p, a {
+      p,
+      a {
         color: gray;
       }
 
@@ -44,7 +49,7 @@
         color: white;
         padding: 10px;
         border-radius: 5px 5px 0 0;
-        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+        background-color: rgb(35,45,90);
       }
 
       .header a {
@@ -59,6 +64,80 @@
         -webkit-box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.3);
         box-shadow: 2px 2px 13px -4px rgba(0, 0, 0, 0.3);
       }
+
+      .task-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: white;
+        border-top: 1px solid rgb(226, 226, 226);
+      }
+
+      .task-title {
+        display: flex;
+      }
+
+      .task-complete-icon {
+        height: 20px;
+        width: 20px;
+        background-color: rgb(105, 192, 105);
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      .task-incomplete-icon {
+        height: 20px;
+        width: 20px;
+        background-color: rgb(218, 218, 218);
+        border-radius: 50%;
+        margin-right: 10px;
+      }
+
+      .delete {
+        color: red;
+      }
+
+      .edit {
+        color: yellow;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      textarea {
+        width: 90%;
+        border-radius: 5px;
+        padding: 10px;
+        border: 1px solid black;
+      }
+
+      label {
+        display: block;
+        padding-top: 10px !important;
+      }
+
+      .button {
+        border-style: none; 
+        background-color: green;
+        color: white;
+        padding: 10px;
+        font-size: 14px;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .search-add-wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .form-body {
+        padding: 20px;
+      }
+      
     </style>
   </head>
   <body>
