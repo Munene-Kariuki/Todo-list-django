@@ -12,6 +12,7 @@ from .models import Task
 # Create your views here.
 
 
+# login user
 class CustomLoginView(LoginView):
     template_name = 'base/login.html'
     fields = '__all__'
@@ -19,8 +20,9 @@ class CustomLoginView(LoginView):
 
     def get_success_url(self):
         return reverse_lazy('tasks')
-    
 
+
+# Sign up new user
 class SignupPage(FormView):
     template_name = 'base/signup.html'
     form_class = UserCreationForm
@@ -28,15 +30,17 @@ class SignupPage(FormView):
     success_url = reverse_lazy('tasks')
 
     def form_valid(self, form):
-        user = form.save() 
+        user = form.save()
         if user is not None:
             login(self.request, user)
         return super(SignupPage, self).form_valid(form)
-    
+
     def get(self, *args, **kwargs):
         if self.request.user.is_authenticated:
-          return redirect('tasks')
+            return redirect('tasks')
         return super(SignupPage, self).get(*args, **kwargs)
+
+# Retrieve all tasks
 
 
 class TaskList(LoginRequiredMixin, ListView):
@@ -47,13 +51,23 @@ class TaskList(LoginRequiredMixin, ListView):
         context = super().get_context_data(**kwargs)
         context['tasks'] = context['tasks'].filter(user=self.request.user)
         context['count'] = context['tasks'].filter(complete=False).count()
+
+        search_input = self.request.GET.get('search') or ''
+        if search_input:
+            context['tasks'] = context['tasks'].filter(
+                title__startswith=search_input)
+            
+        context['search_input'] = search_input
         return context
 
 
+# Retrieve task by id
 class TaskDetail(LoginRequiredMixin, DetailView):
     model = Task
     context_object_name = 'task'
     template_name = 'base/task.html'
+
+# Create new task
 
 
 class TaskCreate(LoginRequiredMixin, CreateView):
@@ -65,11 +79,15 @@ class TaskCreate(LoginRequiredMixin, CreateView):
         form.instance.user = self.request.user
         return super(TaskCreate, self).form_valid(form)
 
+# update task by id
+
 
 class TaskUpdate(LoginRequiredMixin, UpdateView):
     model = Task
     fields = ['title', 'description', 'complete']
     success_url = reverse_lazy('tasks')
+
+# Delete task by id
 
 
 class TaskDelete(LoginRequiredMixin, DeleteView):

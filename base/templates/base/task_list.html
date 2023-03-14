@@ -9,6 +9,12 @@
 <hr>
 <h1>My to do list {{color}}</h1>
 <a href="{% url 'create-task' %}">Add Task</a>
+
+<form method="GET">
+  <input type="text" name="search" placeholder="Search..." value="{{search_input}}"  />
+  <input type="submit" value="Search" />
+</form>
+
 <table>
   <tr>
     <th>Item</th>
@@ -19,7 +25,6 @@
 
   <tr>
     <td>{{ task.title }}</td>
-    <td> <a href="{% url 'task' task.id%}">View</a></td>
     <td> <a href="{% url 'update-task' task.id%}">Edit</a></td>
     <td> <a href="{% url 'delete-task' task.id%}">Delete</a></td>
   </tr>
