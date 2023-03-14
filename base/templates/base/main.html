@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>TO DO LIST</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+
+      body {
+        background-color: #FAFAFA;
+        font-family: 'Sono', sans-serif;
+        padding-top: 50px;
+      }
+
+      .container {
+        max-width: 550px;
+        margin: auto;
+        background-color: white;
+        -webkit-box-shadow: 2px 2px 13px -4px rgba(0,0,0,0.3);
+        box-shadow: 2px 2px 13px -4px rgba(0,0,0,0.3);
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">{% block content %} {% endblock content %}</div>
+  </body>
+</html>
