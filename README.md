@@ -72,7 +72,7 @@ You can now run the development server:
     $ python manage.py runserver    
 
 ### Live Link
-* The live link for the project is 
+* The application is deployed at https://web-production-9bf6.up.railway.app
 
 ## Technology and Tools Used
 
