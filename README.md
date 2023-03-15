@@ -12,11 +12,11 @@ This is a simple to do list. The application allows users to create, retrive, up
 
 - [Description](#description)
 - [Design](#design)
-- [Behavior of the website](#siteBehavior)
-- [Development and set up](#setUp)
-- [Getting started](#Getting)
+- [Behavior of the website](#behaviour-of-the-website)
+- [Development and set up](#development-and-setUp)
+- [Getting started](#Getting-started)
 - [Live link](#Live-Link)
-- [Technology Used](#technology-Used)
+- [Technology Used](#technology-and-tools-Used)
 - [Licence](#licence)
 - [Authors Info](#Authors-info)
 
