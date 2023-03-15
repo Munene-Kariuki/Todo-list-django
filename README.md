@@ -5,7 +5,7 @@ This is a simple to do list. The application allows users to create, retrive, up
 #### By **Denis** created on, 14th March 2023
 
 ## Screenshot
-   ![image](https://ibb.co/fkYkX5k)
+   ![image](Screenshot.png)
 
 
 ## Table of Content
