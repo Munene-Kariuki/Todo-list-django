@@ -1,6 +1,6 @@
 # TO DO LIST
 
-This is a simple to do list. The application allows users to create, retrive, update and delete tasks. A user can only see tasks associated with their account. The application also allows users to signup or login into the application. The application uses Django for the back-end logic and interracting with the database, Html templates for the front-end logic and CSS for styling.
+This is a simple to-do list. The application allows users to create, retrieve, update, and delete tasks. A user can only see tasks associated with their account. The application also allows users to sign up or log into the application. The application uses Django for the back-end logic and interaction with the database, HTML templates for the front-end logic, and CSS for styling.
 
 #### By **Denis** created on, 14th March 2023
 
@@ -17,12 +17,12 @@ This is a simple to do list. The application allows users to create, retrive, up
 - [Getting started](#Getting-started)
 - [Live link](#Live-Link)
 - [Technology Used](#technology-and-tools-Used)
-- [Licence](#licence)
+- [License](#license)
 - [Authors Info](#Authors-info)
 
 ## Description
 
-A webpage showing a user tasks by order of completion status. The application allows a user to create, edit, retrieve and update tasks. The page uses Django and Html templates to render the site.
+A webpage showing a user tasks by order of completion status. The application allows a user to create, edit, retrieve and update tasks. The page uses Django and HTML templates to render the site.
 
 ## Design
 N/A
@@ -32,30 +32,30 @@ N/A
 + The website is visually appealing.
 + The site lists all tasks by order of completion status. Incomplete tasks are rendered first.
 + The site allows a user to create a new task.
-+ Clicking on the delete icon deletes a task from my to do list.
-+ Clicking on the edit button allows a user to update task informatiion.
-+ The website authenticates existing users and allows new users to signup to the application.
++ Clicking on the delete icon deletes a task from my to-do list.
++ Clicking on the edit button allows a user to update task information.
++ The website authenticates existing users and allows new users to sign up for the application.
 + The search bar filters tasks by the first word.
 
 
 ## Development and Setup.
 
-This assumes that `python3` is linked to valid installation of python 3 and that `pip` is installed and `pip3`is valid
-for installing python 3 packages.
+This assumes that `python3` is linked to a valid installation of python 3 and that `pip` is installed and `pip3`is valid
+for installing Python 3 packages.
 
-Installing inside virtualenv is recommended, however you can start your project without virtualenv too.
+Installing inside virtualenv is recommended, however, you can start your project without virtualenv too.
 
-If you don't have django installed for python 3 then run:
+If you don't have Django installed for Python 3 then run:
 
     $ pip3 install django
 
 ### Getting started
-First clone the repository from Github and switch to the new directory:
+First, clone the repository from GitHub and switch to the new directory:
 
     $ git clone git@github.com:Munene-Kariuki/Todo-list-django.git
-    $ cd Todo-list-django
+    $ cd Todo-list-Django
     
-Activate the virtualenv for your project.
+Activate the virtual environment for your project.
     
 Install project dependencies:
 
@@ -81,10 +81,10 @@ You can now run the development server:
 + Python
 + Django
 - Git - Version control
-- Vs code- Code editor
+- Vs code- Code Editor
 
 
-## Licence
+## License
 MIT License
 
 Copyright (c) [2023] [Denis Kariuki]
